@@ -10,6 +10,12 @@ import "../styles/index.scss";
 
 //import your own components
 import Home from "./component/home.jsx";
-
+//import contador from "./component/contador.jsx";
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+
+let contador = 0;
+setInterval(() => {
+	ReactDOM.render(<Home mas={contador} />, document.querySelector("#app"));
+	//document.querySelector("incial").textContent = contador;
+	contador++;
+}, 1000);
